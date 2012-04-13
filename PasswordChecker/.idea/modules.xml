@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PasswordChecker.iml" filepath="$PROJECT_DIR$/PasswordChecker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PwdTool/PwdTool.iml" filepath="$PROJECT_DIR$/PwdTool/PwdTool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing/testing.iml" filepath="$PROJECT_DIR$/testing/testing.iml" />
+    </modules>
+  </component>
+</project>
+
