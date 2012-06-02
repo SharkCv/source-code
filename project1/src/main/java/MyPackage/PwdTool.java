@@ -1,18 +1,11 @@
 package MyPackage;
 
-enum Weight {
-    WEAK,
-    GOOD,
-    STRONG,
-    PASSWORD_IS_NULL
-}
-
 public class PwdTool {
-    static String pass = null;
-    private int specRank = 0;
-    private int digitRank = 0;
-    private int lenRank = 0;
-    private Weight weight = null;
+    private String pass;
+    private int specRank;
+    private int digitRank;
+    private int lenRank;
+    private Weight weight;
 
     /**
      * Ñhecks the rules for password and throws the exception
@@ -20,15 +13,9 @@ public class PwdTool {
      *
      * @throws PwdException
      */
-    private void checkRules() throws PwdException {
+    private void checkRules(){
         final int pwdRank = lenRank + digitRank + specRank;
-        if (lenRank < 6) {
-            throw new PwdException("Password too short");
-        } else if (digitRank < 2) {
-            throw new PwdException("Password must have at least 2 digit");
-        } else if (specRank < 2) {
-            throw new PwdException("Password must have at least 2 special symbol");
-        } else if ((pwdRank >= 10) && (pwdRank <= 12))
+        if ((pwdRank >= 10) && (pwdRank <= 12))
             weight = Weight.WEAK;
         else if ((pwdRank >= 13) && (pwdRank <= 15))
             weight = Weight.GOOD;
@@ -39,9 +26,8 @@ public class PwdTool {
     /**
      * @param pwd The password that will be tested for strength
      * @return The weight of the password
-     * @throws PwdException
      */
-    public Weight check(String pwd) throws PwdException {
+    public Weight check(String pwd){
         pass = pwd;
         if (pass == null) {
             System.out.println("Password can not be null");

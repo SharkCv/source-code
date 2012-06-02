@@ -31,7 +31,7 @@ public class AppTest
         Assert.assertNotNull(p.check("йцукен12№?"));
     }
 
-    public void testNull() {
+    public void testNotNull() {
         Assert.assertNotNull(p.check(null));
     }
 }
